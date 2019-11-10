@@ -1,0 +1,174 @@
+{
+    "items": [
+        {
+			"name" : "CHILL CITY​",
+			"dest" : "MON AMI GABI​",
+			"musiclist" : [
+				{
+					"id" : 1,
+					"singer" : "Jonas Brothers​",
+					"song" : "Only Human​",
+					"album" : "Happiness Begins, 2019​",
+					"genre" : "POP"
+				},
+				{
+					"id" : 2,
+					"singer" : "Anne-Marie​​",
+					"song" : "2002​",
+					"album" : "Speak Your Mind, 2018​​",
+					"genre" : "POP"
+				},
+				{
+					"id" : 3,
+					"singer" : "Gregers",
+					"song" : "Higher​",
+					"album" : "Higher, 2017​​",
+					"genre" : "POP"
+				},
+				{
+					"id" : 4,
+					"singer" : "Shawn Mendes​",
+					"song" : "If I Can`t Have You​",
+					"album" : "If I Can`t Have You, 2019​​",
+					"genre" : "POP"
+				}
+			]
+		},
+		{
+			"name" : "TRENDY\r\nLIFE​",
+			"dest" : "BELLAGIO LAS VEGAS​",
+			"musiclist" : [
+				{
+					"id" : 3,
+					"singer" : "Gregers",
+					"song" : "Higher​",
+					"album" : "Higher, 2017​​",
+					"genre" : "POP"
+				},
+				{
+					"id" : 1,
+					"singer" : "Jonas Brothers​",
+					"song" : "Only Human​",
+					"album" : "Happiness Begins, 2019​",
+					"genre" : "POP"
+				},
+				{
+					"id" : 4,
+					"singer" : "Shawn Mendes​",
+					"song" : "If I Can`t Have You​",
+					"album" : "If I Can`t Have You, 2019​​",
+					"genre" : "POP"
+				},
+				{
+					"id" : 2,
+					"singer" : "Anne-Marie​​",
+					"song" : "2002​",
+					"album" : "Speak Your Mind, 2018​​",
+					"genre" : "POP"
+				}
+			]
+		},
+		{
+			"name" : "BILLBOARD​\r\nTOP 100",
+			"dest" : "MGM GRAND GARDEN ARENA​",
+			"musiclist" : [
+				{
+					"id" : 2,
+					"singer" : "Anne-Marie​​",
+					"song" : "2002​",
+					"album" : "Speak Your Mind, 2018​​",
+					"genre" : "POP"
+				},
+				{
+					"id" : 1,
+					"singer" : "Jonas Brothers​",
+					"song" : "Only Human​",
+					"album" : "Happiness Begins, 2019​",
+					"genre" : "POP"
+				},
+				{
+					"id" : 4,
+					"singer" : "Shawn Mendes​",
+					"song" : "If I Can`t Have You​",
+					"album" : "If I Can`t Have You, 2019​​",
+					"genre" : "POP"
+				},
+				{
+					"id" : 3,
+					"singer" : "Gregers",
+					"song" : "Higher​",
+					"album" : "Higher, 2017​​",
+					"genre" : "POP"
+				}
+			]
+		},
+		{
+			"name" : "ROMANTIC​\r\nSOUND​",
+			"dest" : "FOUNTAINS OF BELLAGIO​",
+			"musiclist" : [
+				{
+					"id" : 4,
+					"singer" : "Shawn Mendes​",
+					"song" : "If I Can`t Have You​",
+					"album" : "If I Can`t Have You, 2019​​",
+					"genre" : "POP"
+				},
+				{
+					"id" : 3,
+					"singer" : "Gregers",
+					"song" : "Higher​",
+					"album" : "Higher, 2017​​",
+					"genre" : "POP"
+				},
+				{
+					"id" : 1,
+					"singer" : "Jonas Brothers​",
+					"song" : "Only Human​",
+					"album" : "Happiness Begins, 2019​",
+					"genre" : "POP"
+				},
+				{
+					"id" : 2,
+					"singer" : "Anne-Marie​​",
+					"song" : "2002​",
+					"album" : "Speak Your Mind, 2018​​",
+					"genre" : "POP"
+				}
+			]
+		},
+		{
+			"name" : "WINTER\r\n2020​",
+			"dest" : "BILLBOARD​ TOP 10",
+			"musiclist" : [
+				{
+					"id" : 1,
+					"singer" : "Jonas Brothers​",
+					"song" : "Only Human​",
+					"album" : "Happiness Begins, 2019​",
+					"genre" : "POP"
+				},
+				{
+					"id" : 3,
+					"singer" : "Gregers",
+					"song" : "Higher​",
+					"album" : "Higher, 2017​​",
+					"genre" : "POP"
+				},
+				{
+					"id" : 4,
+					"singer" : "Shawn Mendes​",
+					"song" : "If I Can`t Have You​",
+					"album" : "If I Can`t Have You, 2019​​",
+					"genre" : "POP"
+				},
+				{
+					"id" : 2,
+					"singer" : "Anne-Marie​​",
+					"song" : "2002​",
+					"album" : "Speak Your Mind, 2018​​",
+					"genre" : "POP"
+				}
+			]
+		}
+	]
+}
