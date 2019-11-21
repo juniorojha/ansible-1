@@ -1,0 +1,9 @@
+---
+# Update play
+
+- name: Update Repos
+  hosts: all
+  gather_facts: no
+  become: True
+  roles:
+    - git_update

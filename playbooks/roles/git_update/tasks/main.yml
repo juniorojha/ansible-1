@@ -1,0 +1,11 @@
+---
+- name: clone the repository
+  git:
+    dest: "{{ GITHUB_LOCALDIR }}/{{ GITHUB_REPO_NAME }}"
+    repo: "{{ GITHUB_BASE_URL }}/{{ GITHUB_REPO_NAME }}"
+    version: "{{ GITHUB_DEFAULT_BRANCH }}"
+    depth: 1
+
+- name: git clean after checking out
+  shell: cd {{ GITHUB_REPO_NAME }} && git clean -xdf
+ 
