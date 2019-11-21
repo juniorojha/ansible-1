@@ -7,5 +7,5 @@
     depth: 1
 
 - name: git clean after checking out
-  shell: cd {{ GITHUB_REPO_NAME }} && git clean -xdf
+  shell: cd {{GITHUB_LOCALDIR}}/{{ GITHUB_REPO_NAME }} && git clean -xdf
  
