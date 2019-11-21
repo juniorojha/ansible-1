@@ -26,6 +26,9 @@ Comment out the [localhost] and add each new server in a new block, e.g.,
 [vm1]
 ip_addr ansible_connection=ssh ansible_user=user ansible_ssh_private_key_file=/home/user/.ssh/id_rsa
 
+Make sure the servers you add here with ansible_connection=ssh allow passwordless ssh connection from the machine where you run ansible.
+To enable this, follow this guide https://askubuntu.com/questions/46930/how-can-i-set-up-password-less-ssh-login
+
 # Run
 Make sure the file server-update-ansible is executable
 Then simply ./server-update-ansible <repo-name>
