@@ -1,0 +1,4 @@
+#!/bin/bash
+chmod +x /root/ansible/server-update-ansible
+source /root/ansible/server-update-ansible
+echo "Done. Updated things using Ansible."

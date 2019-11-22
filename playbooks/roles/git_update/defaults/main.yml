@@ -1,5 +1,5 @@
 ---
-GITHUB_BASE_URL: "https://github.com"
-GITHUB_REPO_NAME: "aiegoo/hanuman"
+GITHUB_BASE_URL: "ssh://root@206.189.85.199:"
+GITHUB_REPO_NAME: "root/repos/test_bare.git"
 GITHUB_LOCALDIR: "/var"
 GITHUB_DEFAULT_BRANCH: "master"
