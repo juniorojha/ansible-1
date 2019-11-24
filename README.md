@@ -6,6 +6,8 @@ We need to configure three kinds of machines -
 2. Deployment Servers (X, Y, Z, etc.)
 3. Development Machines (A, B, etc.)
 
+where M, X, Y, Z, A, B, etc. refer to the IP addresses of these machines respectively.
+
 ## 1.1 Architecture
 This is the architecture diagram which will be used for reference.
 ![Architecture](Architecture.jpg?raw=true "Architecture")
@@ -18,7 +20,15 @@ On the Master Server, four things need to be set up which are -
 4. post-receive hook on the bare repository (G) created in step 1
 
 ## 2.1 Setting up the bare git repository
-[This guide](https://git-scm.com/book/en/v2/Git-on-the-Server-Getting-Git-on-a-Server "This guide") explains the process of creating a bare git repository. Follow this or any other guide to set up your bare repository on this server. It may or may not have shared file server facility as explained [here](https://mindchasers.com/dev/git-bare "here"). Just create a basic bare git repository which you can push to from one of the development machines (A, B, etc.)
+[This guide](https://git-scm.com/book/en/v2/Git-on-the-Server-Getting-Git-on-a-Server "This guide") explains the process of creating a bare git repository. Follow this or any other guide to set up your bare repository on this server. It may or may not have shared file server facility as explained [here](https://mindchasers.com/dev/git-bare "here"). Just create a basic bare git repository which you can push to from one of the development machines (A, B, etc.).
+You can either create a new bare repository -
+```bash
+git init --bare .
+```
+or clone an existing repository in bare mode -
+```bash
+git clone --bare https://github.com/example/example.git
+```
 
 ## 2.2 Configuring the Ansible control node
 The Master server (M) needs to be configured for use as an Ansible control node.
@@ -30,10 +40,23 @@ For installing Ansible on (M) follow the steps given [here](https://docs.ansible
 ### 2.2.2 Clone this repository
 This repository contains the code for ansible playbooks in the branch develop-ansible. Clone it and checkout the branch develop-ansible.
 The expected path where this repository should be cloned on the master server is `/root/`
-So, after cloning, the contents of this repository should be inside `/root/ansible/` folder.
+So, after cloning, the contents of this repository should be inside `/root/ansible/` folder. Following is a set of commands you might require -
+```bash
+cd /root
+git clone https://github.com/aiegoo/ansible.git
+cd ansible
+git checkout develop-ansible
+```
 
 ### 2.2.3 Configure the necessary variables
 In the cloned repository, see config variables in the file playbooks/roles/git_update/defaults/main.yml
+You can edit these variables in the editor of your choice. Assuming you use vim, you can refer to this [quick cheatsheet](https://vim.rtorr.com/ "quick cheatsheet") of vim commands. Here are some commands you might need -
+
+Open the file:
+```bash
+vi /root/ansible/playbooks/roles/git_update/defaults/main.yml
+```
+Enter INSERT mode by pressing `i`, then navigate to the position of the variables given below. Use `DELETE` to remove parts you don't want and type in the text required. When done, press `ESC` to reach back to the command mode. Type `:wq` to save and quit the file. Repeat as required for as many of the variables given below as required.
 
 ##### 2.2.3.1 GITHUB_BASE_URL
 This is the base URL for the repo you're trying to set up. For repos hosted on github.com, this will be 'https://github.com'.
@@ -85,7 +108,11 @@ Basically this boils down to running two commands -
 ```
 ### 2.4 Configuring the post-receive hook
 On this bare repo (G) we need to configure the post-receive hook so that it runs ansible when something is pushed to it.
-The 'post-receive' hook file is provided in this repository. Copy it to the hooks folder inside your bare git repository. Make sure it is executable by running
+The 'post-receive' hook file is provided in this repository. Copy it to the hooks folder inside your bare git repository. 
+```bash
+cp /root/ansible/post-receive /path/to/your/bare/repo.git/hooks/
+```
+Make sure it is executable by running
 `chmod +x post-receive`
 
 # 3. Configuring the deployment servers
