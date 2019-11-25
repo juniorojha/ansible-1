@@ -2,4 +2,4 @@
 GITHUB_BASE_URL: "ssh://root@13.125.219.214:"
 GITHUB_REPO_NAME: "root/repos/ssAuto3.git"
 GITHUB_LOCALDIR: "/var"
-GITHUB_DEFAULT_BRANCH: "ansible_deploy"
+GITHUB_DEFAULT_BRANCH: "master"

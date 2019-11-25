@@ -34,7 +34,7 @@ trap finish EXIT
 
 echo "Updating repo '$default_repo' on all servers"
 
-cd /root/ansible/playbooks && sudo -E ansible-playbook -vvvvv ./update.yml \
+cd /root/ansible/playbooks && sudo -E ansible-playbook -vvv ./update.yml \
  -i inventory.ini \
 # --extra-vars "GITHUB_REPO_NAME='$default_repo'"
 
