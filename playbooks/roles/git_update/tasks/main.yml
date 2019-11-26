@@ -1,4 +1,9 @@
 ---
+- name: delete pre-existing repository
+  file:
+    state: absent
+    path: "{{ GITHUB_LOCALDIR }}/{{ GITHUB_REPO_NAME }}/"
+
 - name: clone the repository
   git:
     dest: "{{ GITHUB_LOCALDIR }}/{{ GITHUB_REPO_NAME }}"
