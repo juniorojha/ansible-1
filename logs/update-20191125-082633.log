@@ -1,0 +1,200 @@
+Capturing output to logs/update-20191125-082633.log
+Update started at 2019-11-25 08:26:33
+Updating repo 'aiegoo/hanuman' on all servers
+ansible-playbook 2.9.1
+  config file = /root/ansible/playbooks/ansible.cfg
+  configured module search path = [u'/root/.ansible/plugins/modules', u'/usr/share/ansible/plugins/modules']
+  ansible python module location = /usr/lib/python2.7/dist-packages/ansible
+  executable location = /usr/bin/ansible-playbook
+  python version = 2.7.15+ (default, Oct  7 2019, 17:39:04) [GCC 7.4.0]
+Using /root/ansible/playbooks/ansible.cfg as config file
+host_list declined parsing /root/ansible/playbooks/inventory.ini as it did not pass its verify_file() method
+script declined parsing /root/ansible/playbooks/inventory.ini as it did not pass its verify_file() method
+auto declined parsing /root/ansible/playbooks/inventory.ini as it did not pass its verify_file() method
+yaml declined parsing /root/ansible/playbooks/inventory.ini as it did not pass its verify_file() method
+Parsed /root/ansible/playbooks/inventory.ini inventory source with ini plugin
+
+PLAYBOOK: update.yml *************************************************************************************************************************************
+1 plays in ./update.yml
+
+PLAY [Update Repos] **************************************************************************************************************************************
+META: ran handlers
+
+TASK [git_update : clone the repository] *****************************************************************************************************************
+task path: /root/ansible/playbooks/roles/git_update/tasks/main.yml:2
+<13.209.3.186> ESTABLISH SSH CONNECTION FOR USER: root
+<13.209.3.186> SSH: EXEC ssh -o ForwardAgent=yes -o StrictHostKeyChecking=no -o 'IdentityFile="/root/.ssh/id_rsa"' -o KbdInteractiveAuthentication=no -o PreferredAuthentications=gssapi-with-mic,gssapi-keyex,hostbased,publickey -o PasswordAuthentication=no -o 'User="root"' -o ConnectTimeout=10 13.209.3.186 '/bin/sh -c '"'"'echo ~root && sleep 0'"'"''
+<54.180.86.51> ESTABLISH SSH CONNECTION FOR USER: root
+<54.180.86.51> SSH: EXEC ssh -o ForwardAgent=yes -o StrictHostKeyChecking=no -o 'IdentityFile="/root/.ssh/id_rsa"' -o KbdInteractiveAuthentication=no -o PreferredAuthentications=gssapi-with-mic,gssapi-keyex,hostbased,publickey -o PasswordAuthentication=no -o 'User="root"' -o ConnectTimeout=10 54.180.86.51 '/bin/sh -c '"'"'echo ~root && sleep 0'"'"''
+<13.209.3.186> (0, '/root\n', '')
+<13.209.3.186> ESTABLISH SSH CONNECTION FOR USER: root
+<13.209.3.186> SSH: EXEC ssh -o ForwardAgent=yes -o StrictHostKeyChecking=no -o 'IdentityFile="/root/.ssh/id_rsa"' -o KbdInteractiveAuthentication=no -o PreferredAuthentications=gssapi-with-mic,gssapi-keyex,hostbased,publickey -o PasswordAuthentication=no -o 'User="root"' -o ConnectTimeout=10 13.209.3.186 '/bin/sh -c '"'"'( umask 77 && mkdir -p "` echo /root/.ansible/tmp/ansible-tmp-1574670394.09-8687131013559 `" && echo ansible-tmp-1574670394.09-8687131013559="` echo /root/.ansible/tmp/ansible-tmp-1574670394.09-8687131013559 `" ) && sleep 0'"'"''
+<13.209.3.186> (0, 'ansible-tmp-1574670394.09-8687131013559=/root/.ansible/tmp/ansible-tmp-1574670394.09-8687131013559\n', '')
+<54.180.86.51> (0, '/root\n', '')
+<54.180.86.51> ESTABLISH SSH CONNECTION FOR USER: root
+<54.180.86.51> SSH: EXEC ssh -o ForwardAgent=yes -o StrictHostKeyChecking=no -o 'IdentityFile="/root/.ssh/id_rsa"' -o KbdInteractiveAuthentication=no -o PreferredAuthentications=gssapi-with-mic,gssapi-keyex,hostbased,publickey -o PasswordAuthentication=no -o 'User="root"' -o ConnectTimeout=10 54.180.86.51 '/bin/sh -c '"'"'( umask 77 && mkdir -p "` echo /root/.ansible/tmp/ansible-tmp-1574670394.1-47246024718490 `" && echo ansible-tmp-1574670394.1-47246024718490="` echo /root/.ansible/tmp/ansible-tmp-1574670394.1-47246024718490 `" ) && sleep 0'"'"''
+<13.209.3.186> Attempting python interpreter discovery
+<13.209.3.186> ESTABLISH SSH CONNECTION FOR USER: root
+<13.209.3.186> SSH: EXEC ssh -o ForwardAgent=yes -o StrictHostKeyChecking=no -o 'IdentityFile="/root/.ssh/id_rsa"' -o KbdInteractiveAuthentication=no -o PreferredAuthentications=gssapi-with-mic,gssapi-keyex,hostbased,publickey -o PasswordAuthentication=no -o 'User="root"' -o ConnectTimeout=10 13.209.3.186 '/bin/sh -c '"'"'echo PLATFORM; uname; echo FOUND; command -v '"'"'"'"'"'"'"'"'/usr/bin/python'"'"'"'"'"'"'"'"'; command -v '"'"'"'"'"'"'"'"'python3.7'"'"'"'"'"'"'"'"'; command -v '"'"'"'"'"'"'"'"'python3.6'"'"'"'"'"'"'"'"'; command -v '"'"'"'"'"'"'"'"'python3.5'"'"'"'"'"'"'"'"'; command -v '"'"'"'"'"'"'"'"'python2.7'"'"'"'"'"'"'"'"'; command -v '"'"'"'"'"'"'"'"'python2.6'"'"'"'"'"'"'"'"'; command -v '"'"'"'"'"'"'"'"'/usr/libexec/platform-python'"'"'"'"'"'"'"'"'; command -v '"'"'"'"'"'"'"'"'/usr/bin/python3'"'"'"'"'"'"'"'"'; command -v '"'"'"'"'"'"'"'"'python'"'"'"'"'"'"'"'"'; echo ENDFOUND && sleep 0'"'"''
+<13.209.3.186> (0, 'PLATFORM\nLinux\nFOUND\n/usr/bin/python\n/usr/bin/python2.7\n/usr/bin/python\nENDFOUND\n', '')
+<13.209.3.186> ESTABLISH SSH CONNECTION FOR USER: root
+<13.209.3.186> SSH: EXEC ssh -o ForwardAgent=yes -o StrictHostKeyChecking=no -o 'IdentityFile="/root/.ssh/id_rsa"' -o KbdInteractiveAuthentication=no -o PreferredAuthentications=gssapi-with-mic,gssapi-keyex,hostbased,publickey -o PasswordAuthentication=no -o 'User="root"' -o ConnectTimeout=10 13.209.3.186 '/bin/sh -c '"'"'/usr/bin/python && sleep 0'"'"''
+<13.209.3.186> (0, '{"osrelease_content": "NAME=\\"Amazon Linux AMI\\"\\nVERSION=\\"2018.03\\"\\nID=\\"amzn\\"\\nID_LIKE=\\"rhel fedora\\"\\nVERSION_ID=\\"2018.03\\"\\nPRETTY_NAME=\\"Amazon Linux AMI 2018.03\\"\\nANSI_COLOR=\\"0;33\\"\\nCPE_NAME=\\"cpe:/o:amazon:linux:2018.03:ga\\"\\nHOME_URL=\\"http://aws.amazon.com/amazon-linux-ami/\\"\\n", "platform_dist_result": ["", "", ""]}\n', '')
+<13.209.3.186> Python interpreter discovery fallback (unsupported Linux distribution: amzn)
+Using module file /usr/lib/python2.7/dist-packages/ansible/modules/source_control/git.py
+<13.209.3.186> PUT /root/.ansible/tmp/ansible-local-23609LQej0N/tmp3HPTPw TO /root/.ansible/tmp/ansible-tmp-1574670394.09-8687131013559/AnsiballZ_git.py
+<13.209.3.186> SSH: EXEC sftp -b - -o ForwardAgent=yes -o StrictHostKeyChecking=no -o 'IdentityFile="/root/.ssh/id_rsa"' -o KbdInteractiveAuthentication=no -o PreferredAuthentications=gssapi-with-mic,gssapi-keyex,hostbased,publickey -o PasswordAuthentication=no -o 'User="root"' -o ConnectTimeout=10 '[13.209.3.186]'
+<54.180.86.51> (0, 'ansible-tmp-1574670394.1-47246024718490=/root/.ansible/tmp/ansible-tmp-1574670394.1-47246024718490\n', '')
+<54.180.86.51> Attempting python interpreter discovery
+<54.180.86.51> ESTABLISH SSH CONNECTION FOR USER: root
+<54.180.86.51> SSH: EXEC ssh -o ForwardAgent=yes -o StrictHostKeyChecking=no -o 'IdentityFile="/root/.ssh/id_rsa"' -o KbdInteractiveAuthentication=no -o PreferredAuthentications=gssapi-with-mic,gssapi-keyex,hostbased,publickey -o PasswordAuthentication=no -o 'User="root"' -o ConnectTimeout=10 54.180.86.51 '/bin/sh -c '"'"'echo PLATFORM; uname; echo FOUND; command -v '"'"'"'"'"'"'"'"'/usr/bin/python'"'"'"'"'"'"'"'"'; command -v '"'"'"'"'"'"'"'"'python3.7'"'"'"'"'"'"'"'"'; command -v '"'"'"'"'"'"'"'"'python3.6'"'"'"'"'"'"'"'"'; command -v '"'"'"'"'"'"'"'"'python3.5'"'"'"'"'"'"'"'"'; command -v '"'"'"'"'"'"'"'"'python2.7'"'"'"'"'"'"'"'"'; command -v '"'"'"'"'"'"'"'"'python2.6'"'"'"'"'"'"'"'"'; command -v '"'"'"'"'"'"'"'"'/usr/libexec/platform-python'"'"'"'"'"'"'"'"'; command -v '"'"'"'"'"'"'"'"'/usr/bin/python3'"'"'"'"'"'"'"'"'; command -v '"'"'"'"'"'"'"'"'python'"'"'"'"'"'"'"'"'; echo ENDFOUND && sleep 0'"'"''
+<13.209.3.186> (0, 'sftp> put /root/.ansible/tmp/ansible-local-23609LQej0N/tmp3HPTPw /root/.ansible/tmp/ansible-tmp-1574670394.09-8687131013559/AnsiballZ_git.py\n', '')
+<13.209.3.186> ESTABLISH SSH CONNECTION FOR USER: root
+<13.209.3.186> SSH: EXEC ssh -o ForwardAgent=yes -o StrictHostKeyChecking=no -o 'IdentityFile="/root/.ssh/id_rsa"' -o KbdInteractiveAuthentication=no -o PreferredAuthentications=gssapi-with-mic,gssapi-keyex,hostbased,publickey -o PasswordAuthentication=no -o 'User="root"' -o ConnectTimeout=10 13.209.3.186 '/bin/sh -c '"'"'chmod u+x /root/.ansible/tmp/ansible-tmp-1574670394.09-8687131013559/ /root/.ansible/tmp/ansible-tmp-1574670394.09-8687131013559/AnsiballZ_git.py && sleep 0'"'"''
+<13.209.3.186> (0, '', '')
+<13.209.3.186> ESTABLISH SSH CONNECTION FOR USER: root
+<13.209.3.186> SSH: EXEC ssh -o ForwardAgent=yes -o StrictHostKeyChecking=no -o 'IdentityFile="/root/.ssh/id_rsa"' -o KbdInteractiveAuthentication=no -o PreferredAuthentications=gssapi-with-mic,gssapi-keyex,hostbased,publickey -o PasswordAuthentication=no -o 'User="root"' -o ConnectTimeout=10 -tt 13.209.3.186 '/bin/sh -c '"'"'/usr/bin/python /root/.ansible/tmp/ansible-tmp-1574670394.09-8687131013559/AnsiballZ_git.py && sleep 0'"'"''
+<54.180.86.51> (0, 'PLATFORM\nLinux\nFOUND\n/usr/bin/python\n/usr/bin/python3.6\n/usr/bin/python2.7\n/usr/bin/python3\n/usr/bin/python\nENDFOUND\n', '')
+<54.180.86.51> ESTABLISH SSH CONNECTION FOR USER: root
+<54.180.86.51> SSH: EXEC ssh -o ForwardAgent=yes -o StrictHostKeyChecking=no -o 'IdentityFile="/root/.ssh/id_rsa"' -o KbdInteractiveAuthentication=no -o PreferredAuthentications=gssapi-with-mic,gssapi-keyex,hostbased,publickey -o PasswordAuthentication=no -o 'User="root"' -o ConnectTimeout=10 54.180.86.51 '/bin/sh -c '"'"'/usr/bin/python && sleep 0'"'"''
+<54.180.86.51> (0, '{"osrelease_content": "NAME=\\"Ubuntu\\"\\nVERSION=\\"18.04.3 LTS (Bionic Beaver)\\"\\nID=ubuntu\\nID_LIKE=debian\\nPRETTY_NAME=\\"Ubuntu 18.04.3 LTS\\"\\nVERSION_ID=\\"18.04\\"\\nHOME_URL=\\"https://www.ubuntu.com/\\"\\nSUPPORT_URL=\\"https://help.ubuntu.com/\\"\\nBUG_REPORT_URL=\\"https://bugs.launchpad.net/ubuntu/\\"\\nPRIVACY_POLICY_URL=\\"https://www.ubuntu.com/legal/terms-and-policies/privacy-policy\\"\\nVERSION_CODENAME=bionic\\nUBUNTU_CODENAME=bionic\\n", "platform_dist_result": ["Ubuntu", "18.04", "bionic"]}\n', '')
+Using module file /usr/lib/python2.7/dist-packages/ansible/modules/source_control/git.py
+<54.180.86.51> PUT /root/.ansible/tmp/ansible-local-23609LQej0N/tmpy73Il7 TO /root/.ansible/tmp/ansible-tmp-1574670394.1-47246024718490/AnsiballZ_git.py
+<54.180.86.51> SSH: EXEC sftp -b - -o ForwardAgent=yes -o StrictHostKeyChecking=no -o 'IdentityFile="/root/.ssh/id_rsa"' -o KbdInteractiveAuthentication=no -o PreferredAuthentications=gssapi-with-mic,gssapi-keyex,hostbased,publickey -o PasswordAuthentication=no -o 'User="root"' -o ConnectTimeout=10 '[54.180.86.51]'
+<54.180.86.51> (0, 'sftp> put /root/.ansible/tmp/ansible-local-23609LQej0N/tmpy73Il7 /root/.ansible/tmp/ansible-tmp-1574670394.1-47246024718490/AnsiballZ_git.py\n', '')
+<54.180.86.51> ESTABLISH SSH CONNECTION FOR USER: root
+<54.180.86.51> SSH: EXEC ssh -o ForwardAgent=yes -o StrictHostKeyChecking=no -o 'IdentityFile="/root/.ssh/id_rsa"' -o KbdInteractiveAuthentication=no -o PreferredAuthentications=gssapi-with-mic,gssapi-keyex,hostbased,publickey -o PasswordAuthentication=no -o 'User="root"' -o ConnectTimeout=10 54.180.86.51 '/bin/sh -c '"'"'chmod u+x /root/.ansible/tmp/ansible-tmp-1574670394.1-47246024718490/ /root/.ansible/tmp/ansible-tmp-1574670394.1-47246024718490/AnsiballZ_git.py && sleep 0'"'"''
+<54.180.86.51> (0, '', '')
+<54.180.86.51> ESTABLISH SSH CONNECTION FOR USER: root
+<54.180.86.51> SSH: EXEC ssh -o ForwardAgent=yes -o StrictHostKeyChecking=no -o 'IdentityFile="/root/.ssh/id_rsa"' -o KbdInteractiveAuthentication=no -o PreferredAuthentications=gssapi-with-mic,gssapi-keyex,hostbased,publickey -o PasswordAuthentication=no -o 'User="root"' -o ConnectTimeout=10 -tt 54.180.86.51 '/bin/sh -c '"'"'/usr/bin/python /root/.ansible/tmp/ansible-tmp-1574670394.1-47246024718490/AnsiballZ_git.py && sleep 0'"'"''
+<13.209.3.186> (1, '\r\n{"exception": "WARNING: The below traceback may *not* be related to the actual failure.\\n  File \\"/tmp/ansible_git_payload_DBHJJM/ansible_git_payload.zip/ansible/modules/source_control/git.py\\", line 461, in clone\\n  File \\"/usr/lib64/python2.7/os.py\\", line 157, in makedirs\\n    mkdir(name, mode)\\n", "stdout": "", "cmd": "/usr/bin/git clone --origin origin \'ssh:********@13.125.249.214:/root/repos/ssAuto3.git\' /var/root/repos/ssAuto3.git", "failed": true, "stderr": "Cloning into \'/var/root/repos/ssAuto3.git\'...\\nssh: connect to host 13.125.249.214 port 22: Connection timed out\\r\\nfatal: Could not read from remote repository.\\n\\nPlease make sure you have the correct access rights\\nand the repository exists.\\n", "rc": 128, "invocation": {"module_args": {"force": true, "track_submodules": false, "reference": null, "verify_commit": false, "ssh_opts": null, "bare": false, "archive": null, "executable": null, "recursive": true, "umask": null, "version": "master", "dest": "/var/root/repos/ssAuto3.git", "clone": true, "gpg_whitelist": [], "update": true, "repo": "ssh://root@13.125.249.214:/root/repos/ssAuto3.git", "remote": "origin", "refspec": null, "separate_git_dir": null, "accept_hostkey": false, "depth": null, "key_file": null}}, "msg": "Cloning into \'/var/root/repos/ssAuto3.git\'...\\nssh: connect to host 13.125.249.214 port 22: Connection timed out\\r\\nfatal: Could not read from remote repository.\\n\\nPlease make sure you have the correct access rights\\nand the repository exists."}\r\n', 'Connection to 13.209.3.186 closed.\r\n')
+<13.209.3.186> Failed to connect to the host via ssh: Connection to 13.209.3.186 closed.
+<13.209.3.186> ESTABLISH SSH CONNECTION FOR USER: root
+<13.209.3.186> SSH: EXEC ssh -o ForwardAgent=yes -o StrictHostKeyChecking=no -o 'IdentityFile="/root/.ssh/id_rsa"' -o KbdInteractiveAuthentication=no -o PreferredAuthentications=gssapi-with-mic,gssapi-keyex,hostbased,publickey -o PasswordAuthentication=no -o 'User="root"' -o ConnectTimeout=10 13.209.3.186 '/bin/sh -c '"'"'rm -f -r /root/.ansible/tmp/ansible-tmp-1574670394.09-8687131013559/ > /dev/null 2>&1 && sleep 0'"'"''
+<13.209.3.186> (0, '', '')
+The full traceback is:
+WARNING: The below traceback may *not* be related to the actual failure.
+  File "/tmp/ansible_git_payload_DBHJJM/ansible_git_payload.zip/ansible/modules/source_control/git.py", line 461, in clone
+  File "/usr/lib64/python2.7/os.py", line 157, in makedirs
+    mkdir(name, mode)
+[WARNING]: Platform linux on host 13.209.3.186 is using the discovered Python interpreter at /usr/bin/python, but future installation of another Python
+interpreter could change this. See https://docs.ansible.com/ansible/2.9/reference_appendices/interpreter_discovery.html for more information.
+fatal: [13.209.3.186]: FAILED! => {
+    "ansible_facts": {
+        "discovered_interpreter_python": "/usr/bin/python"
+    }, 
+    "changed": false, 
+    "cmd": "/usr/bin/git clone --origin origin 'ssh:********@13.125.249.214:/root/repos/ssAuto3.git' /var/root/repos/ssAuto3.git", 
+    "invocation": {
+        "module_args": {
+            "accept_hostkey": false, 
+            "archive": null, 
+            "bare": false, 
+            "clone": true, 
+            "depth": null, 
+            "dest": "/var/root/repos/ssAuto3.git", 
+            "executable": null, 
+            "force": true, 
+            "gpg_whitelist": [], 
+            "key_file": null, 
+            "recursive": true, 
+            "reference": null, 
+            "refspec": null, 
+            "remote": "origin", 
+            "repo": "ssh://root@13.125.249.214:/root/repos/ssAuto3.git", 
+            "separate_git_dir": null, 
+            "ssh_opts": null, 
+            "track_submodules": false, 
+            "umask": null, 
+            "update": true, 
+            "verify_commit": false, 
+            "version": "master"
+        }
+    }, 
+    "msg": "Cloning into '/var/root/repos/ssAuto3.git'...\nssh: connect to host 13.125.249.214 port 22: Connection timed out\r\nfatal: Could not read from remote repository.\n\nPlease make sure you have the correct access rights\nand the repository exists.", 
+    "rc": 128, 
+    "stderr": "Cloning into '/var/root/repos/ssAuto3.git'...\nssh: connect to host 13.125.249.214 port 22: Connection timed out\r\nfatal: Could not read from remote repository.\n\nPlease make sure you have the correct access rights\nand the repository exists.\n", 
+    "stderr_lines": [
+        "Cloning into '/var/root/repos/ssAuto3.git'...", 
+        "ssh: connect to host 13.125.249.214 port 22: Connection timed out", 
+        "fatal: Could not read from remote repository.", 
+        "", 
+        "Please make sure you have the correct access rights", 
+        "and the repository exists."
+    ], 
+    "stdout": "", 
+    "stdout_lines": []
+}
+<54.180.86.51> (1, '\r\n{"exception": "WARNING: The below traceback may *not* be related to the actual failure.\\n  File \\"/tmp/ansible_git_payload_qdRGn8/ansible_git_payload.zip/ansible/modules/source_control/git.py\\", line 461, in clone\\n  File \\"/usr/lib/python2.7/os.py\\", line 157, in makedirs\\n    mkdir(name, mode)\\n", "stdout": "", "cmd": "/usr/bin/git clone --origin origin \'ssh:********@13.125.249.214:/root/repos/ssAuto3.git\' /var/root/repos/ssAuto3.git", "failed": true, "stderr": "Cloning into \'/var/root/repos/ssAuto3.git\'...\\nssh: connect to host 13.125.249.214 port 22: Connection timed out\\r\\nfatal: Could not read from remote repository.\\n\\nPlease make sure you have the correct access rights\\nand the repository exists.\\n", "rc": 128, "invocation": {"module_args": {"force": true, "track_submodules": false, "reference": null, "verify_commit": false, "ssh_opts": null, "bare": false, "archive": null, "executable": null, "recursive": true, "umask": null, "version": "master", "dest": "/var/root/repos/ssAuto3.git", "clone": true, "gpg_whitelist": [], "update": true, "repo": "ssh://root@13.125.249.214:/root/repos/ssAuto3.git", "remote": "origin", "refspec": null, "separate_git_dir": null, "accept_hostkey": false, "depth": null, "key_file": null}}, "msg": "Cloning into \'/var/root/repos/ssAuto3.git\'...\\nssh: connect to host 13.125.249.214 port 22: Connection timed out\\r\\nfatal: Could not read from remote repository.\\n\\nPlease make sure you have the correct access rights\\nand the repository exists."}\r\n', 'Connection to 54.180.86.51 closed.\r\n')
+<54.180.86.51> Failed to connect to the host via ssh: Connection to 54.180.86.51 closed.
+<54.180.86.51> ESTABLISH SSH CONNECTION FOR USER: root
+<54.180.86.51> SSH: EXEC ssh -o ForwardAgent=yes -o StrictHostKeyChecking=no -o 'IdentityFile="/root/.ssh/id_rsa"' -o KbdInteractiveAuthentication=no -o PreferredAuthentications=gssapi-with-mic,gssapi-keyex,hostbased,publickey -o PasswordAuthentication=no -o 'User="root"' -o ConnectTimeout=10 54.180.86.51 '/bin/sh -c '"'"'rm -f -r /root/.ansible/tmp/ansible-tmp-1574670394.1-47246024718490/ > /dev/null 2>&1 && sleep 0'"'"''
+<54.180.86.51> (0, '', '')
+The full traceback is:
+WARNING: The below traceback may *not* be related to the actual failure.
+  File "/tmp/ansible_git_payload_qdRGn8/ansible_git_payload.zip/ansible/modules/source_control/git.py", line 461, in clone
+  File "/usr/lib/python2.7/os.py", line 157, in makedirs
+    mkdir(name, mode)
+[DEPRECATION WARNING]: Distribution Ubuntu 18.04 on host 54.180.86.51 should use /usr/bin/python3, but is using /usr/bin/python for backward 
+compatibility with prior Ansible releases. A future Ansible release will default to using the discovered platform python for this host. See 
+https://docs.ansible.com/ansible/2.9/reference_appendices/interpreter_discovery.html for more information. This feature will be removed in version 2.12. 
+Deprecation warnings can be disabled by setting deprecation_warnings=False in ansible.cfg.
+fatal: [54.180.86.51]: FAILED! => {
+    "ansible_facts": {
+        "discovered_interpreter_python": "/usr/bin/python"
+    }, 
+    "changed": false, 
+    "cmd": "/usr/bin/git clone --origin origin 'ssh:********@13.125.249.214:/root/repos/ssAuto3.git' /var/root/repos/ssAuto3.git", 
+    "invocation": {
+        "module_args": {
+            "accept_hostkey": false, 
+            "archive": null, 
+            "bare": false, 
+            "clone": true, 
+            "depth": null, 
+            "dest": "/var/root/repos/ssAuto3.git", 
+            "executable": null, 
+            "force": true, 
+            "gpg_whitelist": [], 
+            "key_file": null, 
+            "recursive": true, 
+            "reference": null, 
+            "refspec": null, 
+            "remote": "origin", 
+            "repo": "ssh://root@13.125.249.214:/root/repos/ssAuto3.git", 
+            "separate_git_dir": null, 
+            "ssh_opts": null, 
+            "track_submodules": false, 
+            "umask": null, 
+            "update": true, 
+            "verify_commit": false, 
+            "version": "master"
+        }
+    }, 
+    "msg": "Cloning into '/var/root/repos/ssAuto3.git'...\nssh: connect to host 13.125.249.214 port 22: Connection timed out\r\nfatal: Could not read from remote repository.\n\nPlease make sure you have the correct access rights\nand the repository exists.", 
+    "rc": 128, 
+    "stderr": "Cloning into '/var/root/repos/ssAuto3.git'...\nssh: connect to host 13.125.249.214 port 22: Connection timed out\r\nfatal: Could not read from remote repository.\n\nPlease make sure you have the correct access rights\nand the repository exists.\n", 
+    "stderr_lines": [
+        "Cloning into '/var/root/repos/ssAuto3.git'...", 
+        "ssh: connect to host 13.125.249.214 port 22: Connection timed out", 
+        "fatal: Could not read from remote repository.", 
+        "", 
+        "Please make sure you have the correct access rights", 
+        "and the repository exists."
+    ], 
+    "stdout": "", 
+    "stdout_lines": []
+}
+
+PLAY RECAP ***********************************************************************************************************************************************
+13.209.3.186               : ok=0    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+54.180.86.51               : ok=0    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+
+ 
+========================================
+Ansible failed!
+----------------------------------------
+    Your log file is at logs/update-20191125-082633.log
+    Your environment:
+========================================
+Update finished at 2019-11-25 08:28:51
