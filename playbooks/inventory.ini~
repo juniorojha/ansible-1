@@ -1,8 +1,0 @@
-#[localhost]
-#127.0.0.1 ansible_connection=local
-
-[vm1]
-54.180.86.51 ansible_connection=ssh ansible_user=root ansible_ssh_private_key_file=/root/.ssh/id_rsa
-
-#[vm2]
-#13.209.3.186 ansible_connection=ssh ansible_user=root ansible_ssh_private_key_file=/root/.ssh/id_rsa
