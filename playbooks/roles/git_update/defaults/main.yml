@@ -1,5 +1,8 @@
 ---
-GITHUB_BASE_URL: "ssh://root@13.125.219.214:"
-GITHUB_REPO_NAME: "root/repos/ssAuto3.git"
+githubuser: "root"
+githubpassword: "1JBH2XWxv9Btx4RbbnF1"
+gitlab_url: "13.125.219.214"
+GITHUB_BASE_URL: "http://{{ githubuser | urlencode }}:{{ githubpassword | urlencode }}@{{ gitlab_url }}"
+GITHUB_REPO_NAME: "root/gitlabpw.git"
 GITHUB_LOCALDIR: "/var"
-GITHUB_DEFAULT_BRANCH: "ansible_deploy"
+GITHUB_DEFAULT_BRANCH: "master"
