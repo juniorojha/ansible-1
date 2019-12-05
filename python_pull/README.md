@@ -1,5 +1,5 @@
 # Overview
-Here, we need to configure two things - 
+Here, we need to configure two things (for each clone on slaves) - 
 1. A python server on the client (system which will have the clone of the repository, assuming it is at the IP 54.180.86.51) with a bash script to do 'git pull'
 2. A webhook on gitlab to tell the python server created in the previous step that it is now time to pull
 
